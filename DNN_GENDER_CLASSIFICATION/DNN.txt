@@ -1,0 +1,63 @@
+Model Documentation Report
+Gender Classification using Dense Neural Network Documentation Report
+1. Introduction
+
+1.1 Purpose
+The purpose of this model is to classify images of male and female faces. It is a binary classification task aimed at distinguishing between male and female faces in images.
+
+1.2 Scope
+This model is designed to be used for classifying images of male and female faces. It employs a Deep Neural Network (DNN) architecture and leverages Tensor Flow and Keras for implementation.
+
+2. Data Collection
+
+The dataset used for this model consists of images of male and female faces. The data was collected Kaggle.
+
+3. Data Preprocessing
+
+3.1 Data Directory Structure
+The dataset is organized into three directories: "Train (5441 images)," "Validation (2197 images)," and "Test (4482 images)." Each directory contains subdirectories with images of male and female faces.
+
+3.2 Data Augmentation
+Data augmentation techniques were applied during training to increase model robustness. These techniques include rotation, width and height shifting, shear, zoom, and horizontal flipping.
+
+
+4. Model Architecture
+
+The model architecture is a Deep Neural Network (DNN) with the following layers:
+
+- Flatten Layer (Input Layer)
+- Dense Layer with 256 units and ReLU activation
+- Dropout Layer (40% dropout rate)
+- Dense Layer with 128 units and ReLU activation
+- Dropout Layer (40% dropout rate)
+- Dense Layer with 64 units and ReLU activation
+- Dropout Layer (40% dropout rate)
+- Dense Layer with 1 unit and Sigmoid activation (Output Layer)
+
+5. Model Training
+
+5.1 Training Parameters
+- Optimizer: Adam
+- Loss Function: Binary Cross-Entropy
+- Metrics: Accuracy, Precision, Recall
+
+5.2 Training Process
+The model was trained for one epoch due to the limitations of this example. In practice, increasing the number of epochs would likely improve model performance.
+
+6. Model Evaluation
+
+The model was evaluated on a separate test dataset using the following metrics:
+- Test Accuracy: 0.6909%
+- Test Precision: 0.5104%
+- Test Recall: 0.6997%
+- F1-Score: 0.5902%
+7. Model Predictions
+
+The model made predictions on the test dataset and generated class labels using a threshold of 0.5 for binary classification.
+
+8. Conclusion
+
+In this example, we built a Deep Neural Network model to classify male and female faces from images. The model achieved an accuracy of 0.6909%, precision of 0.5104%, and recall of 0.6997% on the test dataset. Further experimentation with hyper parameters and additional training epochs may lead to improved performance.
+
+Overall, this model can be used as a starting point for similar image classification tasks and can be further refined to achieve higher accuracy.
+
